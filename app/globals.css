@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+.canvas {
+  position: fixed;
+  inset: 0;
+  width: full;
+  height: full;
+  overflow: hidden;
+}
