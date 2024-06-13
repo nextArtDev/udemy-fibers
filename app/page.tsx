@@ -29,7 +29,7 @@ export default function Home() {
         onCreated={(state) => state.gl.setClearColor('black', 0.3)}
       >
         <Scene />
-        <Perf />
+        {/* <Perf /> */}
         {/*  reed:x, green:y , blue:z */}
         {/* <axesHelper args={[2]} /> */}
 

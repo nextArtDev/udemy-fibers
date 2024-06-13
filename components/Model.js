@@ -1,7 +1,7 @@
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { useEffect } from 'react'
 
-const Model = () => {
+const Model = (props) => {
   const model = useGLTF('./model/dog.glb')
   const animations = useAnimations(model.animations, model.scene)
 
@@ -17,6 +17,7 @@ const Model = () => {
     <primitive
       position={[-0.9, 1.3, 0]}
       rotation={[0, 2, 0]}
+      {...props}
       object={model.scene}
     />
   )
