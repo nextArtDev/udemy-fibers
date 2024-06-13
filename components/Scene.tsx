@@ -1,6 +1,6 @@
 'use client'
 import { useFrame, useThree, useLoader } from '@react-three/fiber'
-import { RefObject, Suspense, useRef } from 'react'
+import { RefObject, Suspense, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from '@react-three/drei'
 import Custom from './Custom'
