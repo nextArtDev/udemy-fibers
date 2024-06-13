@@ -1,7 +1,7 @@
 'use client'
 import Scene from '@/components/Scene'
 import { Canvas } from '@react-three/fiber'
-
+import { Perf } from 'r3f-perf'
 export default function Home() {
   return (
     <section className="relative w-full h-screen min-h-screen">
@@ -26,9 +26,10 @@ export default function Home() {
         // Executed once the canvas has been created, it will be called once
         // state is the useFrame state, but just called once
         // setClearColor(color, a:opacity)
-        onCreated={(state) => state.gl.setClearColor('black', 1)}
+        onCreated={(state) => state.gl.setClearColor('black', 0.3)}
       >
         <Scene />
+        <Perf />
         {/*  reed:x, green:y , blue:z */}
         {/* <axesHelper args={[2]} /> */}
 
