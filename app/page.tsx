@@ -2,10 +2,12 @@
 import Scene from '@/components/Scene'
 import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
+import Environments from '../components/Environments'
 export default function Home() {
   return (
     <section className="relative w-full h-screen min-h-screen">
       <Canvas
+        shadows
         // orthographic: size is not proportional to distance of camera
         // orthographic
         className="canvas"
@@ -29,6 +31,7 @@ export default function Home() {
         onCreated={(state) => state.gl.setClearColor('black', 0.3)}
       >
         <Scene />
+        <Environments />
         {/* <Perf /> */}
         {/*  reed:x, green:y , blue:z */}
         {/* <axesHelper args={[2]} /> */}

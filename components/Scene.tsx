@@ -53,7 +53,7 @@ function Scene({}: Props) {
       <OrbitControls />
       <ambientLight intensity={2} />
       <directionalLight intensity={10} />
-      <Custom />
+      {/* <Custom /> */}
       {/* <mesh ref={ref as RefObject<THREE.Mesh>}> */}
       {/*  reed:x, green:y , blue:z */}
       {/* <axesHelper args={[2]} /> */}

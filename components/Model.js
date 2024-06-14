@@ -28,6 +28,7 @@ const Model = (props) => {
 
   return (
     <primitive
+      castShadow
       onClick={clickHandler}
       position={[-0.9, 1.3, 0]}
       rotation={[0, 2, 0]}
