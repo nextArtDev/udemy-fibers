@@ -3,6 +3,7 @@ import Scene from '@/components/Scene'
 import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
 import Environments from '../components/Environments'
+import Cameras from '@/components/Cameras'
 export default function Home() {
   return (
     <section className="relative w-full h-screen min-h-screen">
@@ -30,8 +31,9 @@ export default function Home() {
         // setClearColor(color, a:opacity)
         onCreated={(state) => state.gl.setClearColor('black', 0.3)}
       >
+        <Cameras />
         <Scene />
-        <Environments />
+        {/* <Environments /> */}
         {/* <Perf /> */}
         {/*  reed:x, green:y , blue:z */}
         {/* <axesHelper args={[2]} /> */}
