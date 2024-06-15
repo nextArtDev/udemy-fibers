@@ -13,6 +13,8 @@ const Images = () => {
   const groupRef = useRef()
 
   useFrame(() => {
+    // all the range of scroll, here 4 pages, is from 0 to 1
+    // range(0,0.33) 0-> increasing the value when scrollbar is at the start position
     groupRef.current.children[0].material.zoom = 1 + scroll.range(0, 1 / 3) / 3
     groupRef.current.children[1].material.zoom = 1 + scroll.range(1 / 3, 1 / 3)
     groupRef.current.children[2].material.zoom = 1 + scroll.range(1 / 3, 1 / 3)
