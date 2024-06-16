@@ -8,6 +8,7 @@ import Particles from './Particles'
 import Bike from './Bike.jsx'
 import Model from './Model'
 import { button, useControls } from 'leva'
+import Audio from './Audio'
 import Texts from './Text'
 type Props = {}
 
@@ -51,7 +52,7 @@ function Scene({}: Props) {
 
   return (
     <>
-      <Texts />
+      {/* <Texts /> */}
       <OrbitControls />
       <ambientLight intensity={2} />
       <directionalLight intensity={10} />
@@ -90,6 +91,7 @@ function Scene({}: Props) {
       >
         <Model position={[position.x, position.y, position.z]} scale={scale} />
       </Suspense> */}
+      <Audio />
     </>
   )
 }
