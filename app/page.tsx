@@ -31,7 +31,7 @@ export default function Home() {
         // setClearColor(color, a:opacity)
         onCreated={(state) => state.gl.setClearColor('black', 0.3)}
       >
-        <Cameras />
+        {/* <Cameras /> */}
         <Scene />
         {/* <Environments /> */}
         {/* <Perf /> */}
