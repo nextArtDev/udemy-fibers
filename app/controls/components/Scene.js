@@ -4,6 +4,7 @@ import PresentationControl from './PresentationControl'
 import ScrollControl from './ScrollControl'
 import TransformControl from './TransformControl'
 import PivotControl from './PivotControl'
+import HorizontalScrollControl from './Horizontal/HorizontalScrollControl'
 
 const Scene = () => {
   return (
@@ -11,9 +12,10 @@ const Scene = () => {
       {/* <CameraControl /> */}
       {/* <OrbitControl /> */}
       {/* <PresentationControl /> */}
-      <ScrollControl />
+      {/* <ScrollControl /> */}
       {/* <TransformControl /> */}
       {/* <PivotControl /> */}
+      <HorizontalScrollControl />
     </>
   )
 }

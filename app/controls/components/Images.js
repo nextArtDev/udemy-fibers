@@ -5,6 +5,7 @@ import { Image, useScroll } from '@react-three/drei'
 import { useThree, useFrame } from '@react-three/fiber'
 import { useRouter } from 'next/navigation'
 import { useRef } from 'react'
+import * as THREE from 'three'
 
 const Images = () => {
   const router = useRouter()
@@ -12,7 +13,19 @@ const Images = () => {
   const scroll = useScroll()
   const groupRef = useRef()
 
-  useFrame(() => {
+  useFrame((state, delta) => {
+    groupRef.current.position.z = THREE.MathUtils.damp(
+      groupRef.current.position.z,
+      Math.max(0, scroll.delta * 50),
+      4,
+      delta
+    )
+    // groupRef.current.material.grayscale = THREE.MathUtils.damp(
+    //   groupRef.current.material.grayscale,
+    //   Math.max(0, 1 - scroll.delta * 1000),
+    //   4,
+    //   delta
+    // )
     // all the range of scroll, here 4 pages, is from 0 to 1
     // range(0,0.33) 0-> increasing the value when scrollbar is at the start position
     groupRef.current.children[0].material.zoom = 1 + scroll.range(0, 1 / 3) / 3
