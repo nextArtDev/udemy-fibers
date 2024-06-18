@@ -10,6 +10,7 @@ import Model from './Model'
 import { button, useControls } from 'leva'
 import Audio from './Audio'
 import Texts from './Text'
+import Shaders from './Shaders'
 type Props = {}
 
 function Scene({}: Props) {
@@ -91,7 +92,8 @@ function Scene({}: Props) {
       >
         <Model position={[position.x, position.y, position.z]} scale={scale} />
       </Suspense> */}
-      <Audio />
+      {/* <Audio /> */}
+      <Shaders />
     </>
   )
 }
