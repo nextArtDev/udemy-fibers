@@ -2,7 +2,7 @@
 import { useFrame, useThree, useLoader } from '@react-three/fiber'
 import { RefObject, Suspense, useRef, useState } from 'react'
 import * as THREE from 'three'
-import { OrbitControls } from '@react-three/drei'
+import { MeshReflectorMaterial, OrbitControls } from '@react-three/drei'
 import Custom from './Custom'
 import Particles from './Particles'
 import Bike from './Bike.jsx'
@@ -11,6 +11,7 @@ import { button, useControls } from 'leva'
 import Audio from './Audio'
 import Texts from './Text'
 import Shaders from './Shaders'
+import PortalMaterial from './PortalMaterial'
 type Props = {}
 
 function Scene({}: Props) {
@@ -93,7 +94,8 @@ function Scene({}: Props) {
         <Model position={[position.x, position.y, position.z]} scale={scale} />
       </Suspense> */}
       {/* <Audio /> */}
-      <Shaders />
+      {/* <Shaders /> */}
+      <PortalMaterial />
     </>
   )
 }

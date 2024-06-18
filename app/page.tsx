@@ -29,7 +29,7 @@ export default function Home() {
         // Executed once the canvas has been created, it will be called once
         // state is the useFrame state, but just called once
         // setClearColor(color, a:opacity)
-        onCreated={(state) => state.gl.setClearColor('black', 0.3)}
+        onCreated={(state) => state.gl.setClearColor('black', 1)}
       >
         {/* <Cameras /> */}
         <Scene />
